@@ -1,0 +1,56 @@
+
+.heading-primary {
+    font-size: 3rem;
+    color: $midnight-color ;
+}
+
+.heading-secondary {
+    font-size: 1.5rem;
+    color: $primary-color ;
+}
+
+.heading-tertiary {
+    color: #34495ea6;
+}
+
+.m-b-small{ margin-bottom: 1rem;}
+
+.m-b-medium{ margin-bottom: 2rem;}
+
+.m-b-big { margin-bottom: 3rem;}
+
+.m-b-huge { margin-bottom: 9rem;}
+
+
+.social {
+    list-style: none;
+    li {
+        display: inline-block;
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        padding: .5rem;
+        transition: all .2s;
+        border-radius: 50%;
+        &:hover {
+        // background-color:$midnight-color;
+        transform: translateY(-5%);
+
+        a {
+            color: $primary-color;
+            font-size: 2.3rem;
+        }
+        }
+    }
+
+    &-fb , &-insta {
+        color: $midnight-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        font-size: 2.2rem;
+        transition: color .3s;
+
+    }
+}

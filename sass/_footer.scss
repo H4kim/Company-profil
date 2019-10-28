@@ -1,0 +1,62 @@
+.footer { 
+    background-color: rgba($midnight-color,.8);
+    text-align: center;
+    padding: 5rem 0;
+
+    &-logo--box {
+        margin-bottom: 2rem;
+    }
+    &-logo {
+        width: 7rem;
+    }
+
+    &_row {
+        display: flex;
+    }
+
+    &-navigation {
+        width: 48%;
+    }
+
+    &-list {
+        list-style: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.274);
+        display: inline-block;
+        padding-top: 1rem;
+    }    
+
+    &-item {
+        display: inline-block;
+        letter-spacing: 2px;
+        
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        a:visited , a:link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.527);
+            transition: all .2s;
+            display: block;
+
+            &:hover {
+                color: white;
+                transform: translateY(-1px);
+
+            }
+        }
+    }
+    &-copyright {
+        width: 48%;
+
+        p {
+            color: rgba(255, 255, 255, 0.527);
+
+            a:visited , a:link {
+                text-decoration: none;
+                color: white;
+            }
+
+        }
+    }
+}

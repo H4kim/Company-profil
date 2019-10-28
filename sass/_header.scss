@@ -1,0 +1,135 @@
+.header {
+    position: relative;
+    
+    &-home {
+        background-image: linear-gradient(to right bottom , rgba(128, 128, 128, 0.349) , rgba(255, 255, 255, 0.411) ) 
+        ,url(../img/header-back-2.jpg) ;
+        background-size: cover;
+        height: 90vh;
+        // background-position: top;
+    }
+
+    &-other {
+        background-image: linear-gradient(to right bottom , rgba(128, 128, 128, 0.349) , rgba(255, 255, 255, 0.411) ) 
+        , url(../img/header-recipe.jpg);
+        height: 50vh;
+        box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.04);
+        background-size: cover;
+        background-position: top;
+       
+    }
+
+    &-topbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 2rem;
+        z-index: 100;
+        transition: all .2s;
+    
+    }
+
+    &-logo {
+        position: relative;
+        height: 5rem;
+        &-img {
+            width: 4.5rem;
+            height: 5rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            
+        }
+    }
+
+    &-navbar {
+
+        &-list {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        &-item {
+            display: inline;
+            
+            
+            &:not(:last-child){
+                margin-right: .9rem;
+            }
+
+            a {
+            text-decoration: none;
+            color: $midnight-color ;
+            transition: all .1s ease-in;
+            font-size: 1.3rem;
+            font-weight: 500;
+            background-color: rgba(255, 255, 255, 0.477);
+            padding: .5rem .5rem;
+            border-radius: 3px;
+
+            &.border-bottom {
+            border-bottom: medium solid $primary-color-dark;
+            padding-bottom: 3px;
+            border-radius: 1px;
+            }
+
+            &:hover {
+                border-bottom: medium solid $primary-color-dark;
+                padding-bottom: 3px;
+                border-radius: 1px;
+                
+            }
+            }
+        }   
+    }
+
+    &-text  {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50% , -30%);
+
+        &--other {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        }
+
+        &--anim {
+            color:$midnight-color ;
+            font-weight: 700;
+            border-right: 2px solid rgba(255,255,255,.75);
+            font-size: 3rem;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            /* animation */ 
+            animation: typewriter 4s steps(44) 2s 1,
+            blinkTextCursor 200ms steps(44) infinite ;
+            // animation-direction: alternate; 
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;    
+    }
+        &--simple {
+            color :$midnight-color ;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+
+        
+            span {
+                border-bottom: thin dotted  $primary-color-dark;
+                background-color: white;
+                border-radius: 2px;
+                padding: 0 .5rem;
+                // color: $primary-color-light;
+            }
+
+        }
+
+    }
+}

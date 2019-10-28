@@ -1,0 +1,75 @@
+.contact {
+    width: 60%;
+    margin : 0 auto;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.form {
+    
+    &_row{
+        display: flex;
+        justify-content: space-between;
+        &--1 {
+
+        }
+
+        &--2 {
+
+        }
+    }
+
+    &_input {
+      width: 48%;
+      font-size: 1.5rem;
+      border : none;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.315);
+      margin-bottom: 4rem;
+      outline: none;
+      font-family: inherit;
+      padding-bottom: .5rem;
+      
+
+      &::placeholder {
+          color: $grey-dark-3;
+      }
+
+      &--message {
+          width: 100%;
+          font-size: 1.5rem;
+          border : none;
+          border-bottom: 1px solid rgba(128, 128, 128, 0.315);
+          margin-bottom: 3.5rem;
+          outline: none;
+          font-family: inherit;
+          padding-bottom: .5rem;
+          &::placeholder {
+            color: $grey-dark-3;
+        }
+      }
+    }
+
+    &_btn {
+        background-color: rgba($midnight-color,.8);
+        border: none;
+        color: white;
+        padding: .8rem 1.5rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.5rem;
+        // border : 2px solid rgba($primary-color,.5);
+        border-radius: 1px;
+        outline: none;
+        font-family: inherit;
+        box-shadow: 0 1px .5rem rgba(128, 128, 128, 0.507);
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 1rem rgba(128, 128, 128, 0.973);
+            background-color: $midnight-color;
+        }
+    }
+}
