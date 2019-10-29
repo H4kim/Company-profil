@@ -6,7 +6,12 @@
         ,url(../img/header-back-2.jpg) ;
         background-size: cover;
         height: 90vh;
-        // background-position: top;
+
+        @include r(tab-port){
+            height: 60vh;
+        }
+
+       
     }
 
     &-other {
@@ -28,33 +33,70 @@
         right: 0;
         top: 2rem;
         z-index: 100;
-        transition: all .2s;
+        transition: all .3s;
+        height: 5rem;
+        
+
+
+        @include r(tab-port){
+            background-color: white;
+            top: 0;
+            flex-wrap: wrap;
+            padding: .3rem 2rem;
+            height: auto;
+            box-shadow:  0 1px 1rem rgba(0, 0, 0, 0.4);
+
+
+        }
+
+        
     
     }
 
     &-logo {
         position: relative;
-        height: 5rem;
+
+        @include r(tab-port){
+            width: 50%;
+            text-align: left;
+            
+           
+        }
         &-img {
-            width: 4.5rem;
-            height: 5rem;
+            width: 5.5rem;
+            // height: 5rem;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+
+            @include r(tab-port){
+                width: 4rem;
+            }
             
         }
     }
 
     &-navbar {
-
+        
         &-list {
             list-style-type: none;
             display: inline-block;
+
+            @include r(tab-port){
+                display: none;
+                text-align: center;
+                
+            }
         }
 
         &-item {
             display: inline;
             
+            @include r(tab-port){
+                display: block;
+                margin-bottom: 1rem;
+
+            }
             
             &:not(:last-child){
                 margin-right: .9rem;
@@ -70,10 +112,22 @@
             padding: .5rem .5rem;
             border-radius: 3px;
 
+            @include r(tab-port){
+                background-color : none;
+                border-radius: 0;
+                padding: 0;
+            }
+
             &.border-bottom {
             border-bottom: medium solid $primary-color-dark;
             padding-bottom: 3px;
             border-radius: 1px;
+
+            @include r(tab-port){
+                border-bottom : none;
+                padding-bottom: none;
+                border-radius: 0;
+            }
             }
 
             &:hover {
@@ -81,9 +135,37 @@
                 padding-bottom: 3px;
                 border-radius: 1px;
                 
+                @include r(tab-port){
+                border-bottom : none;
+                padding-bottom: none;
+                border-radius: 0;
             }
             }
-        }   
+            }
+        }
+        
+        &-drop {
+            display: none;
+            
+            
+            input {
+                visibility: hidden;
+            }
+
+            @include r(tab-port){
+                display: block;
+                width: 50%;
+                text-align: right;
+
+            }
+        }
+
+        &-icon {
+            color: rgba(0, 0, 0, 0.637);
+            font-size: 2.5rem;
+            font-weight: 700;
+           
+        }
     }
 
     &-text  {
@@ -92,11 +174,20 @@
         left: 50%;
         transform: translate(-50% , -30%);
 
+        @include r(tab-port){
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        }
+
         &--other {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50% , -50%);
+
+        
+
         }
 
         &--anim {
@@ -112,13 +203,29 @@
             blinkTextCursor 200ms steps(44) infinite ;
             // animation-direction: alternate; 
             animation-fill-mode: forwards;
-            animation-timing-function: ease-in-out;    
+            animation-timing-function: ease-in-out;   
+
+            @include r(tab-port){
+            font-size: 2.5rem;
+
+            }
+
+            @include r(phone){
+            font-size: 2rem;
+
+            }            
+            
     }
         &--simple {
             color :$midnight-color ;
             text-align: center;
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 700;
+
+            @include r(tab-port){
+                font-size: 1.8rem;
+    
+            }
 
         
             span {

@@ -2,24 +2,62 @@
 .heading-primary {
     font-size: 3rem;
     color: $midnight-color ;
+
+    @include r(tab-port){
+        font-size: 2.5rem;
+    }
+
+    @include r(phone){
+        font-size: 2rem;
+    }
 }
 
 .heading-secondary {
     font-size: 1.5rem;
     color: $primary-color ;
+
+    @include r(phone){
+        font-size: 1.2rem;
+    }
+
+    
 }
 
 .heading-tertiary {
     color: #34495ea6;
 }
 
-.m-b-small{ margin-bottom: 1rem;}
+.m-b-small{
+     margin-bottom: 1rem;
 
-.m-b-medium{ margin-bottom: 2rem;}
+     @include r(phone){
+        margin-bottom: .8rem;
+    }
+}
 
-.m-b-big { margin-bottom: 3rem;}
+.m-b-medium{
+     margin-bottom: 2rem;
 
-.m-b-huge { margin-bottom: 9rem;}
+     @include r(phone){
+        margin-bottom: 1.7rem;
+    }
+    }
+
+.m-b-big { 
+    margin-bottom: 3rem;
+
+    @include r(phone){
+        margin-bottom: 2.5rem;
+    }
+}
+
+.m-b-huge { 
+    margin-bottom: 9rem;
+
+    @include r(phone){
+        margin-bottom: 7rem;
+    }
+}
 
 
 .social {

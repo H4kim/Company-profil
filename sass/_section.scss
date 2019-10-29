@@ -11,9 +11,27 @@
     margin: 0 auto;
     justify-content: space-between;
     padding: 5rem 0;
-    &-text {
-        padding: 10rem 5rem;
 
+    @include r(tab-port){
+        flex-direction: column;
+    }
+    @include r(phone){
+        flex-direction: column;
+    }
+    &-text {
+        width: 45%;
+        align-self: center;
+        
+        @include r(tab-port){
+            margin-bottom: 3rem;
+            width: 90%;
+            text-align: center;
+        }
+
+        @include r(phone){
+            margin-bottom: 3rem;
+            width: 100%;
+        }
         h1 {
             font-size: 4rem;
             color: $midnight-color ;
@@ -21,10 +39,20 @@
     }
 
     &-image {
+        width: 45%;
+        @include r(tab-port){
+            width: 70%;
+            margin: 0 auto;
+        }
 
+        @include r(phone){
+            width: 100%;
+        }
+        
         &--food {
             box-shadow: 0 2px 1rem $midnight-color ;
             border-radius: 3px;
+            width: 100%;
         }
     }
 }
@@ -63,19 +91,36 @@
 .row {
     display: flex;
     justify-content: space-around;
-    
 
+    @include r(tab-port){
+        flex-direction: column;
+        align-items: center;
+        // justify-content: space-around;
+    } 
 }
 
 .col{
     width: 48%;
-    height: 30rem;
+    height: 40rem;
     text-align: center;
+
+    @include r(tab-port){
+        width: 70%;
+    }
+
+    @include r(phone){
+        width: 90%;
+    }
+
     &-left {
         background-image : linear-gradient(to right bottom , rgba(#DDDDDD, 0.9), rgba($midnight-color, .2)) ;
         position: relative;
         box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.082);
         border-radius: 3px;
+
+        @include r(tab-port){
+            margin-bottom: 3rem;
+        }
     }
 
     &-right {

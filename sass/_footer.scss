@@ -3,19 +3,33 @@
     text-align: center;
     padding: 5rem 0;
 
+    @include r(tab-port) {
+        padding: 2.5rem 0;
+    }
+
     &-logo--box {
         margin-bottom: 2rem;
     }
     &-logo {
-        width: 7rem;
+        width: 5rem;
     }
 
     &_row {
         display: flex;
+
+        @include r(tab-port) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &-navigation {
         width: 48%;
+
+        @include r(tab-port) {
+            margin-bottom: 1.2rem;
+            width: 100%;
+        }
     }
 
     &-list {
@@ -39,6 +53,10 @@
             transition: all .2s;
             display: block;
 
+            @include r(tab-port) {
+                color: white;
+            }
+
             &:hover {
                 color: white;
                 transform: translateY(-1px);
@@ -49,8 +67,17 @@
     &-copyright {
         width: 48%;
 
+        @include r(tab-port) {
+            width: 100%;
+        }
+
+
         p {
             color: rgba(255, 255, 255, 0.527);
+            
+            @include r(tab-port) {
+                font-size: 1.2rem;
+            }
 
             a:visited , a:link {
                 text-decoration: none;

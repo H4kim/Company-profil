@@ -2,6 +2,11 @@
     padding-top: 10rem ;
     text-align: center;
     background-color: $grey-light-1;
+
+    @include r(tab-port) {
+    padding-top: 5rem ;
+        
+    }
     
     
 }
@@ -12,12 +17,35 @@
     align-content: center;
     width: 80%;
     margin: 0 auto 10rem auto;
+    flex-wrap: wrap;
+
+
+    @include r(tab-land) {
+        flex-wrap: wrap;
+    }
+
+    @include r(tab-port) {
+        flex-direction: column;
+        align-items: center;
+    }
 
    
     &-container {
     width: 23%;
     margin-bottom: 4rem;
     background-color: rgb(255, 255, 255);
+
+    @include r(tab-land) {
+        width: 45%;
+    }
+
+    @include r(tab-port) {
+        width: 60%;
+    }
+
+    @include r(phone) {
+        width: 100%;
+    }
     }
     &-card {
     box-shadow: 0 1px 1rem rgba(34, 31, 31, 0.08); 
@@ -25,11 +53,8 @@
     transition: all .3s;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
-    height: 30rem;
-
-    
-
-    
+    height: 35rem;
+    overflow: hidden;
 
     
         &--img {
@@ -60,6 +85,7 @@
             position: relative;
             bottom: 0;
             left: 2px ;
+            font-size: 1.5rem;
 
             &:hover {
                 background-color:rgba(95, 236, 182, 0.507);

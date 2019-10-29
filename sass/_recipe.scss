@@ -15,18 +15,28 @@
     box-shadow: 0 1px 1rem rgba(128, 128, 128, 0.374);
     font-size: 1.2rem;
 
+    @include r(tab-port) {
+        flex-direction: column;
+        width: 89%;
+    }
+
     &:not(:last-child){
         margin-bottom: 8rem;
     }
 
     &-img {
-        // width: 100% ;
-        flex: 1;
-        
-
+       
         &--img {
             width: 20rem;
             height: 20rem;
+
+            @include r(tab-port) {
+                width: 70%;
+            }
+
+            @include r(phone) {
+                width: 100%;
+            }
         }
     }
 
@@ -36,6 +46,11 @@
         text-align: left;
         padding-left: 1rem;
 
+        @include r(tab-port) {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
         ul {
             list-style-position: inside;
          }
@@ -44,6 +59,10 @@
     &-instruction {
        text-align: left;
        flex: 3;
+       
+       @include r(tab-port) {
+        text-align: center;
+    }
 
     }
 }
