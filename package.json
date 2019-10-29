@@ -8,11 +8,10 @@
     "liveserver" : "live-server",
     "start": "npm-run-all --parallel watch:sass liveserver", 
 
-    "compile:sass": "node-sass sass/main.scss css/style.css",
-    "concat:css": "concat -o css/style.conc.css css/icons-font.css css/style.css",
-    "prefix:css": "npx postcss css/style.conc.css -o css/style.prefix.css  --use autoprefixer",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    "compile:sass": "node-sass sass/main.scss css/style.noncompressed.css",
+    "prefix:css": "npx postcss css/style.noncompressed.css -o  css/style.noncompressed.css --use autoprefixer",
+    "compress:css": "node-sass css/style.noncompressed.css css/style.css --output-style compressed",
+    "build": "npm-run-all compile:sass prefix:css compress:css"
   },
   "author": "Hakim Bencella",
   "license": "ISC",
