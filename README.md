@@ -1,6 +1,9 @@
 # Company-profil
 Template for small companies or individuals 
 
+### Preview
+https://h4kim.github.io/Company-profil/
+
 # Getting Started 
 you can use the html files , the style.css and index.js as they are , 
 
@@ -19,5 +22,3 @@ More user interaction
 More pages and content 
 
 Performance improvement 
-
-
